@@ -1,9 +1,9 @@
-#define PWML 1
-#define motorpinL1 2
+#define PWML 9
+#define motorpinL1 2 
 #define motorpinL2 3
 #define motorpinR1 4
 #define motorpinR2 5
-#define PWMR 6 
+#define PWMR 10
 void motor_int()
 {
   pinMode(PWML, OUTPUT);
