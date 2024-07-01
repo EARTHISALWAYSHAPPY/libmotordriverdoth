@@ -1,4 +1,4 @@
 # libmotordriverdoth
-libary for motor driver (L298n)
+library for motor driver (L298n)
 ***beginner library for motor driver from me***
 ***Dev & Coding by me***
