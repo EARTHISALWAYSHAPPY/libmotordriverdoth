@@ -1,10 +1,4 @@
-uint8_t PWML = 6;
-uint8_t motorpinL1 = 2;
-uint8_t motorpinL2 = 3;
-uint8_t motorpinR1 = 4;
-uint8_t motorpinR2 = 5;
-uint8_t PWMR = 7;
-void motor_int(uint8_t PWML, uint8_t motorpinL1, uint8_t motorpinL2, uint8_t motorpinR1, uint8_t motorpinR2, uint8_t PWMR)
+void motor_int()
 {
   pinMode(PWML, OUTPUT);
   pinMode(motorpinL1, OUTPUT);
