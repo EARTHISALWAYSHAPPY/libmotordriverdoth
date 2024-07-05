@@ -1,4 +1,5 @@
 #include <libmotordriver.h>
+//Creating class objects LibMotorDriver can call methods.
 LibMotorDriver motor_ctrl;
 void setup() {
 
