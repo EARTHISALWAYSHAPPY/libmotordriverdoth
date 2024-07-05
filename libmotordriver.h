@@ -11,6 +11,7 @@
 class LibMotorDriver {
   public:
     LibMotorDriver();
+    // Method
     void motor(int left, int right);
     void motor_stop_all();
 
@@ -25,6 +26,7 @@ class LibMotorDriver {
     void motorFR(int b);
     void motorBL(int c);
     void motorBR(int d);
+    // Initialize pins
     void motor_int();
 };
 
