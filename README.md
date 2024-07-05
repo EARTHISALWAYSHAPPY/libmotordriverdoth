@@ -19,6 +19,7 @@ motorpinR1 4 (IN3)
 motorpinR2 5 (IN4)
 
 PWMR 10 (ENB)
+
 ---------------------
 
 #include <libmotordriver.h>
