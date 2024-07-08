@@ -1,33 +1,41 @@
 #ifndef LibMotorDriver_h
 #define LibMotorDriver_h
 #include <Arduino.h>
-#define L 9
-#define INL1 2
-#define INL2 3
-#define INR1 4
-#define INR2 5
-#define R 10
+
 
 class LibMotorDriver {
-  public:
-    LibMotorDriver();
-    // Method
-    void motor(int left, int right);
-    void motor_stop_all();
+public:
+  uint8_t PWML;
+  uint8_t motorpinL1;
+  uint8_t motorpinL2;
+  uint8_t motorpinR1;
+  uint8_t motorpinR2;
+  uint8_t PWMR;
+  //default constructor is a constructor that either has no parameters, or if it has parameters, all the parameters have default values
+  LibMotorDriver() {
+  }
 
-  private:
-    const int PWML = L;
-    const int motorpinL1 = INL1;
-    const int motorpinL2 = INL2;
-    const int motorpinR1 = INR1;
-    const int motorpinR2 = INR2;
-    const int PWMR = R;
-    void motorFL(int a);
-    void motorFR(int b);
-    void motorBL(int c);
-    void motorBR(int d);
-    // Initialize pins
-    void motor_int();
+  LibMotorDriver(uint8_t L, uint8_t INL1, uint8_t INL2, uint8_t INR1, uint8_t INR2, uint8_t R) {
+    PWML = L;
+    motorpinL1 = INL1;
+    motorpinL2 = INL2;
+    motorpinR1 = INR1;
+    motorpinR2 = INR2;
+    PWMR = R;
+    motor_int();
+  }
+
+  // Method
+  void motor(int left, int right);
+  void motor_stop_all();
+
+private:
+  void motorFL(int a);
+  void motorFR(int b);
+  void motorBL(int c);
+  void motorBR(int d);
+  // Initialize pins
+  void motor_int();
 };
-
+//jubjub ju bu jubu
 #endif
