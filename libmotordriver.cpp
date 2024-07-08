@@ -1,9 +1,6 @@
 #include "libmotordriver.h"
 
-LibMotorDriver::LibMotorDriver() {
-  // Initialize pins
-  motor_int();
-}
+
 void LibMotorDriver::motor_int() {
   pinMode(PWML, OUTPUT);
   pinMode(motorpinL1, OUTPUT);
