@@ -14,15 +14,15 @@ void loop() {
   int Rl = analogRead(L);
   int Rr = analogRead(R);
   //forword
-  if (Rl < 150 && Rr < 150) {    //fix value ir
+  if (Rl == 0 && Rr == 0) {    //fix value ir
     motor_ctrl.motor(45, 45);    //fix speed
   }
   //turn left
-  if (Rl > 150 && Rr < 150) {    //fix value ir
+  if (Rl == 1  && Rr == 0) {    //fix value ir
     motor_ctrl.motor(-30, 75);   //fix speed
   }
   //turn right
-  if (Rl < 150 && Rr > 150) {   //fix value ir
+  if (Rl == 0  && Rr == 1) {   //fix value ir
     motor_ctrl.motor(75, -30);  //fix speed
   }
 }
