@@ -1,18 +1,20 @@
 #include "libmotordriver.h"
-#define L A2
+#define L 2
 #define INL1 2
 #define INL2 3
 #define INR1 4
 #define INR2 5
-#define R A3
+#define R 3
 LibMotorDriver motor_ctrl(L, INL1, INL2, INR1, INR2, R);
 void setup() {
 
   Serial.begin(9600);
+  pinMode(L, INPUT);
+  pinMode(R, INPUT);
 }
 void loop() {
-  int Rl = analogRead(L);
-  int Rr = analogRead(R);
+  bool Rl = digitalRead(L);
+  bool Rr = digitalRead(R);
   //forword
   if (Rl == 0 && Rr == 0) {    //fix value ir
     motor_ctrl.motor(45, 45);    //fix speed
